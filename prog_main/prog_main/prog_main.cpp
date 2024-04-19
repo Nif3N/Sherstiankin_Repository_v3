@@ -28,9 +28,13 @@ void CountNumX(int num_X)
 int main()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     setlocale(LC_ALL, "rus");
 >>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
+=======
+    setlocale(LC_ALL, "rus");
+>>>>>>> origin/main
     cout << "1. ¬вести натуральное число X" << endl;
     cout << "2. ¬вести цифру N (котора€ меньше числа разр€дов числа X)" << endl;
     cout << "3. ќпределить произведение последних N цифр натурального числа X" << endl;
@@ -47,7 +51,10 @@ int main()
         EnterN(n, x);
 =======
         EnterN(n);
+<<<<<<< HEAD
 >>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
+=======
+>>>>>>> origin/main
         break;
     case 3: 
         MultiplyN(x, n);
