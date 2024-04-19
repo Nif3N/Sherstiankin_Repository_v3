@@ -1,2 +1,10 @@
 PlatformToolSet=v142:VCToolArchitecture=Native32Bit:VCToolsVersion=14.28.29333:TargetPlatformVersion=10.0.18362.0:
+<<<<<<< HEAD
+<<<<<<< HEAD
+Debug|Win32|\\edustor\psimeikn\sherstiankinnr\Desktop\GIT_Lab3\Sherstiankin_Repository_v3_2\prog_main\|
+=======
 Debug|Win32|\\edustor\psimeikn\sherstiankinnr\Desktop\GIT_Lab3\Sherstiankin_Repository_v3_1\prog_main\|
+>>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
+=======
+Debug|Win32|\\edustor\psimeikn\sherstiankinnr\Desktop\GIT_Lab3\Sherstiankin_Repository_v3_1\prog_main\|
+>>>>>>> origin/main

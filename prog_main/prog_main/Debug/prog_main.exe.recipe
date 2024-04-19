@@ -2,7 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <FullPath>\\edustor\psimeikn\sherstiankinnr\Desktop\GIT_Lab3\Sherstiankin_Repository_v3_2\prog_main\Debug\prog_main.exe</FullPath>
+=======
       <FullPath>\\edustor\psimeikn\sherstiankinnr\Desktop\GIT_Lab3\Sherstiankin_Repository_v3_1\prog_main\Debug\prog_main.exe</FullPath>
+>>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
+=======
+      <FullPath>\\edustor\psimeikn\sherstiankinnr\Desktop\GIT_Lab3\Sherstiankin_Repository_v3_1\prog_main\Debug\prog_main.exe</FullPath>
+>>>>>>> origin/main
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

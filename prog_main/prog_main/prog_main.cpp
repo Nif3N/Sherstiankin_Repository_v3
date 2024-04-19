@@ -9,9 +9,12 @@ void EnterX(int &num_X)
         cin >> num_X;
     } while (num_X <= 0);
 }
-void EnterN(int &num_N)
+void EnterN(int &num_N, int &num_X)
 {
-
+    do {
+        cout << "¬ведите N: ";
+        cin >> num_N;
+    } while (num_N >= num_X || num_N <= 0);
 }
 void MultiplyN(int num_X, int num_N)
 {
@@ -24,13 +27,19 @@ void CountNumX(int num_X)
 
 int main()
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     setlocale(LC_ALL, "rus");
+>>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
+=======
+    setlocale(LC_ALL, "rus");
+>>>>>>> origin/main
     cout << "1. ¬вести натуральное число X" << endl;
     cout << "2. ¬вести цифру N (котора€ меньше числа разр€дов числа X)" << endl;
     cout << "3. ќпределить произведение последних N цифр натурального числа X" << endl;
     cout << "4. ќпределить количество цифр введенного числа X" << endl;
     cout << "¬ведите номер функции (1-4) или 0 дл€ выхода: ";
-
     int k, x, n;
     cin >> k;
     switch (k) {
@@ -38,7 +47,14 @@ int main()
         EnterX(x);
         break;
     case 2:
+<<<<<<< HEAD
+        EnterN(n, x);
+=======
         EnterN(n);
+<<<<<<< HEAD
+>>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
+=======
+>>>>>>> origin/main
         break;
     case 3: 
         MultiplyN(x, n);
