@@ -30,11 +30,20 @@ void MultiplyN(int num_X, int num_N)
 }
 void CountNumX(int num_X)
 {
-
+    int count = 1;
+    while (num_X / 10 != 0)
+    {
+        count++;
+        num_X = num_X / 10;
+    }
+    cout << "Кол-во цифр в числе X: " << count;
 }
 
 int main()
 {
+<<<<<<< HEAD
+    setlocale(LC_ALL, "rus");
+=======
 <<<<<<< HEAD
     setlocale(LC_ALL, "rus");
 =======
@@ -47,6 +56,7 @@ int main()
     setlocale(LC_ALL, "rus");
 >>>>>>> origin/main
 >>>>>>> 19c2d45274411776d18a9d90124981b2e95f5ba7
+>>>>>>> 77d447eba2512ee84beb50f90742ce1b947ca743
     cout << "1. Ввести натуральное число X" << endl;
     cout << "2. Ввести цифру N (которая меньше числа разрядов числа X)" << endl;
     cout << "3. Определить произведение последних N цифр натурального числа X" << endl;
@@ -66,10 +76,13 @@ int main()
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
 =======
 >>>>>>> origin/main
 >>>>>>> 19c2d45274411776d18a9d90124981b2e95f5ba7
+>>>>>>> 77d447eba2512ee84beb50f90742ce1b947ca743
         break;
     case 3: 
         MultiplyN(x, n);
