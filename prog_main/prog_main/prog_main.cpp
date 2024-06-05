@@ -1,22 +1,67 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
+bool UserInputX(string input)
+{
+    if (input.empty()) return false;
+
+    try
+    {
+        int number = stoi(input);
+        if (number <= 0) return false;
+    }
+    catch (...)
+    {
+        return false;
+    }
+    return true;
+}
+
+bool UserInputN(string input, int numX)
+{
+    if (input.empty()) return false;
+
+    try
+    {
+        int number = stoi(input);
+        if (number <= 0) return false;
+        if (number >= numX) return false;
+    }
+    catch (...)
+    {
+        return false;
+    }
+    return true;
+}
+
 void EnterX(int &num_X)
 {
-    do {
-        cout << "Введите X:";
-        cin >> num_X;
-    } while (num_X <= 0);
+    string str_input;
+    getline(cin, str_input);
+    while (!UserInputX(str_input))
+    {
+        cout << "Введите X: ";
+        getline(cin, str_input);
+    }
+    num_X = stoi(str_input);
 }
+
 void EnterN(int &num_N, int &num_X)
 {
-    do {
+    string str_input;
+    cout << "Введите N: ";
+    getline(cin, str_input);
+    while (!UserInputN(str_input, num_X))
+    {
         cout << "Введите N: ";
-        cin >> num_N;
-    } while (num_N >= num_X || num_N <= 0);
+        getline(cin, str_input);
+    }
+    num_N = stoi(str_input);
 }
-void MultiplyN(int num_X, int num_N)
+
+int MultiplyN(int num_X, int num_N)
 {
     int res = 1;
     int mult = 0;
@@ -26,9 +71,9 @@ void MultiplyN(int num_X, int num_N)
         num_X = num_X / 10;
         res = res * mult;
     }
-    cout << "Произведение последних N цифр: " << res << endl;
+    return res;
 }
-void CountNumX(int num_X)
+int CountNumX(int num_X)
 {
     int count = 1;
     while (num_X / 10 != 0)
@@ -36,63 +81,51 @@ void CountNumX(int num_X)
         count++;
         num_X = num_X / 10;
     }
-    cout << "Кол-во цифр в числе X: " << count;
+    return count;
 }
 
 int main()
 {
-<<<<<<< HEAD
     setlocale(LC_ALL, "rus");
-=======
-<<<<<<< HEAD
-    setlocale(LC_ALL, "rus");
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    setlocale(LC_ALL, "rus");
->>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
-=======
-    setlocale(LC_ALL, "rus");
->>>>>>> origin/main
->>>>>>> 19c2d45274411776d18a9d90124981b2e95f5ba7
->>>>>>> 77d447eba2512ee84beb50f90742ce1b947ca743
-    cout << "1. Ввести натуральное число X" << endl;
-    cout << "2. Ввести цифру N (которая меньше числа разрядов числа X)" << endl;
-    cout << "3. Определить произведение последних N цифр натурального числа X" << endl;
-    cout << "4. Определить количество цифр введенного числа X" << endl;
-    cout << "Введите номер функции (1-4) или 0 для выхода: ";
-    int k, x, n;
-    cin >> k;
-    switch (k) {
-    case 1: 
-        EnterX(x);
-        break;
-    case 2:
-<<<<<<< HEAD
-        EnterN(n, x);
-=======
-        EnterN(n);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 969c4fe1bc45bbfe24f07870ada95b5c9e14ea0b
-=======
->>>>>>> origin/main
->>>>>>> 19c2d45274411776d18a9d90124981b2e95f5ba7
->>>>>>> 77d447eba2512ee84beb50f90742ce1b947ca743
-        break;
-    case 3: 
-        MultiplyN(x, n);
-        break;
-    case 4:
-        CountNumX(x);
-        break;
-    default:
-        cout << "Ошибка ввода!";
-        break;
-    }
-}
+    int k, x, n, res, count;
+    bool funX = false, funN = false;
+    do {
+        cout << "1. Ввести натуральное число X" << endl;
+        cout << "2. Ввести цифру N (которая меньше числа разрядов числа X)" << endl;
+        cout << "3. Определить произведение последних N цифр натурального числа X" << endl;
+        cout << "4. Определить количество цифр введенного числа X" << endl;
+        cout << "Введите номер функции (1-4) или 0 для выхода: ";
 
+        cin >> k;
+        switch (k) {
+        case 1:
+            EnterX(x);
+            funX = true;
+            break;
+        case 2:
+            if (funX) {
+                EnterN(n, x);
+                funN = true;
+            }
+            else { cout << "Error!" << endl; }
+            break;
+        case 3:
+            if (funX && funN) {res = MultiplyN(x, n); 
+            cout << "Произведение последних N цифр: " << res << endl;
+            }
+            else { cout << "Error!" << endl; }
+            break;
+        case 4:
+            if (funX) {
+                count = CountNumX(x);
+                cout << "Кол-во цифр в числе X: " << count << endl;
+            }
+            break;
+        case 0:
+            break;
+        default:
+            cout << "Ошибка ввода!"<<endl;
+            break;
+        }
+    } while (k != 0);
+}
